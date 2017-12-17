@@ -1,0 +1,12 @@
+<section>
+  <form #myForm="ngForm">
+    <label for="city">City</label>
+    <input class="form-control" name="city" type="text" id="city" ngModel>
+    <button (click)="submit(myForm)">Add city</button>
+  </form>
+  <div>
+    <span *ngIf="myForm ==true" class="info-city">City found:</span> {{searchCity}}
+
+  </div>
+  
+</section>
