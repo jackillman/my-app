@@ -18,7 +18,8 @@ import { WeatherListComponent } from './widgets/weather-list/weather-list.compon
 import { WeatherSearchComponent } from './widgets/weather-search/weather-search.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
-
+import { WeatherService } from './widgets/weather.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,9 +41,10 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
