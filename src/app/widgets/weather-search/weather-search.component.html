@@ -1,11 +1,11 @@
 <section>
   <form #myForm="ngForm">
-    <label for="city">City</label>
+    <label for="city">Введите название города на латиннице</label>
     <input class="form-control" name="city" type="text" id="city" ngModel>
-    <button (click)="submit(myForm)">Add city</button>
+    <button (click)="submit(myForm)">Узнать погоду</button>
   </form>
   <div>
-    <span *ngIf="myForm ==true" class="info-city">City found:</span> {{searchCity}}
+    <span *ngIf="myForm ==true" class="info-city">City found:</span> 
 
   </div>
   

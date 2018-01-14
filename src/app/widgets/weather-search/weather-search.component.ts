@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, Form} from '@angular/forms';
 import { WeatherService } from '../weather.service';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-weather-search',
@@ -9,12 +10,17 @@ import { WeatherService } from '../weather.service';
 })
 export class WeatherSearchComponent implements OnInit {
   searchCity:string;
-  constructor(private weatherService:WeatherService) { }
+  user;
+  constructor(private weatherService:WeatherService,private http:HttpClient ) { }
 
   ngOnInit() {
   }
-  submit(myForm: string){
-  //  this.searchCity = myForm.form.value.city
-    this.weatherService.searchWeatherData(myForm).subscribe(res=>console.log(res));
+  
+  submit(myForm){
+    this.searchCity = myForm.value.city;
+    this.weatherService.searchWeatherData(this.searchCity);
+    this.searchCity=" ";
   }
+  
+ 
 }
