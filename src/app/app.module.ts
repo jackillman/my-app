@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import { NgForm} from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { appRoutes } from './app.router';
@@ -20,6 +20,14 @@ import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { WeatherService } from './widgets/weather.service';
 import {HttpClientModule} from '@angular/common/http';
+import { SliderComponent } from './blocks/slider/slider.component';
+import { CarsListComponent } from './pages/cars/cars-list/cars-list.component';
+import { CarItemComponent } from './pages/cars/car-item/car-item.component';
+
+
+
+import { AgmCoreModule } from '@agm/core';
+import { AutoService } from './services/auto.service';
 
 @NgModule({
   declarations: [
@@ -35,16 +43,20 @@ import {HttpClientModule} from '@angular/common/http';
     WeatherListComponent,
     WeatherSearchComponent,
     FooterComponent,
-    CatalogComponent
+    CatalogComponent,
+    SliderComponent,
+    CarsListComponent,
+    CarItemComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,NgbModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService,AutoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

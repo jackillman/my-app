@@ -25,13 +25,13 @@
           <li class="dropdown">
             <a routerLink="cars" routerLinkActive="active" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Легковые <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li *ngFor ="let car of cars"><a href="#">{{car.name}}</a></li>
+              <li *ngFor ="let car of cars"><a [routerLink]="['cars', car.name]">{{car.title}}</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a routerLink="trucks" routerLinkActive="active" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Грузовые <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li *ngFor ="let truck of trucks"><a href="#">{{truck.name}}</a></li>
+              <li *ngFor ="let truck of trucks"><a [routerLink]="[truck.name]">{{truck.title}}</a></li>
               
             </ul>
           </li>

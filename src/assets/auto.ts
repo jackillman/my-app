@@ -1,18 +1,15 @@
 
 
-
-
-
 export const cars = [
     
-    { name:"Ауди", price: 56000},
-    { name: "Форд", price: 56000},
-    { name: "Феррари", price: 25000}
+    { title: "Ауди", name:"audi", price: 56000},
+    { title: "Форд",name: "ford", price: 56000},
+    { title: "Феррари",name: "ferrari", price: 25000}
 ];
 
 export const trucks = [
     
-    { name:"МАН", price: 156000},
-    { name: "Камаз", price: 156000},
-    { name: "КИА", price: 125000}
+    {  title: "МАН", name:"man", price: 156000},
+    {  title: "Камаз", name: "kamaz", price: 156000},
+    {  title: "КИА", name: "kia", price: 125000}
 ];
